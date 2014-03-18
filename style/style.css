@@ -1,0 +1,32 @@
+#log {
+	height: 80px;
+	width: 210px;
+	background-color: grey;
+	padding: 10px;
+	border-radius: 10px;
+}
+.newsmain {
+	width: 500px;
+	height: 200px;
+	margin: auto;
+    border: 2px outset grey;
+}
+#new {
+	float: right;
+}
+#fullnew {
+    width: 600px;
+	margin: auto;
+}
+#pager {
+	margin: auto ;
+	width: 50px;
+}
+#shure {
+  margin: auto;
+  width: 100px;
+}
+#areyou {
+  margin: auto;
+  width: 230px;
+}
