@@ -20,7 +20,7 @@ function addnew_page_callback() {
         $author = $_SESSION['name'];
         date_default_timezone_set('Europe/Kiev');
         $date = date('Y-m-j, h:i:s');
-        $insert = array('title'=>$title , 'dat' => $date, 'tex'=>$text, 'user'=>$author);
+        $insert = array('title'=>$title , 'dat' => $date, 'tex' => $text, 'user' => $author);
         $STH = $db->prepare("INSERT INTO news(title, dat, tex, user) VALUES (:title, :dat, :tex, :user)");
         $STH->execute($insert);
         $arr = dbquery("SELECT * FROM news ORDER BY id DESC");
