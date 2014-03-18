@@ -9,6 +9,7 @@
   $out .= $dani['tex'] . '<br>';
   $out .= 'Date: ' . $dani['dat'] . '<br>';
   $out .= 'Author: ' . $dani['user'];
+
   if (isset($_POST['del'])){
     header("Location: index.php?page=delete&id=" . $id);
   }
@@ -17,10 +18,11 @@
   }
   if (isset($_SESSION['name'])){
     $out .= '<form method = "post" action = "">
-    <input type = "submit" name = "del" value = "Delete">
-    <input type = "submit" name = "edit" value = "Edit">
-    </form>';
+            <input type = "submit" name = "del" value = "Delete">
+            <input type = "submit" name = "edit" value = "Edit">
+            </form>';
   }
+  $out .='</div>';
   return $out;
 }
 ?>

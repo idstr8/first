@@ -3,7 +3,6 @@
   require_once 'db.php';
   require_once 'functions.php';
 
-
   session_start();
   if(!isset($_GET['page'])){
     $page = 'main';
@@ -21,21 +20,19 @@
 <title><?php print get_title($page);?></title>
 </head>
 <body>
-<?php require_once 'pages/auth.php'; ?>
 <?php print author();?>
 
 <a href="/">MAIN</a>
 
 <?php
-  require ('pages/' . "$page" . '.php');
-  $function = $page . '_page_callback';
-  if (function_exists($function)) {
-  	print $function();
-  }
-  else {
-    print 'PAGE NOT FOUND';
-  }
+require ('pages/' . "$page" . '.php');
+$function = $page . '_page_callback';
+if (function_exists($function)) {
+	print $function();
+}
+else {
+  print 'PAGE NOT FOUND';
+}
 ?>
 </body>
 </html>
-
